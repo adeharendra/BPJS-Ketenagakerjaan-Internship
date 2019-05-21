@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.min.css">
+
+		<!-- Font Awesome Icons -->
+		<link rel="stylesheet" href="<?= base_url(); ?>assets/css/font-awesome.min.css">
+	
+		<link rel="stylesheet" href="<?= base_url(); ?>assets/css/style.css">
+
+    <title>Login User</title>
+  </head>
+
+  <body>
+	<div class="login">
+		<div class="login-screen">
+			<div class="app-title">
+				<h2>Login User</h2>
+			</div>
+			<?php if(isset($error)) { echo $error; }; ?>   
+			<form method="POST" action="<?= base_url() ?>login">
+			  <div class="form-group mt-4">
+					<label for="username">Username</label>
+					<input type="text" class="form-control" name="username" id="username" placeholder="Masukan Username">
+					<?= form_error('username'); ?>
+			  </div>
+			  <div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" class="form-control" name="password" id="password" placeholder="Masukan Password">
+					<?= form_error('password'); ?>
+			  </div>
+			  <center>
+				  <button type="submit" class="btn btn-primary btn-block">Login</button>
+				  <br>
+				  <a data-toggle="modal" data-target="#exampleModalCenter" href="#">Mengalami Masalah?</a>
+				  <br><br>
+					<p>Copyright&copy; 2019<br>UDINUS | BPJS Ketenagakerjaan</p>
+			  </center>
+			</form>
+		</div>
+		<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle">Mengalami Masalah?</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+				<h5>Belum Punya Akun</h5>
+				<p>
+					1. Hubungi Admin untuk membuatkan akun baru<br>
+					2. Akun baru akan dibuatkan oleh admin<br>
+					3. Anda akan mendapat username dan password<br>
+					4. Login menggunakan data tersebut<br>
+					5. Lakukan pengubahan password demi keamanan akun<br>
+				</p><br>
+				<h5>Lupa Password</h5>
+				<p>
+					1. Hubungi Admin untuk mengubah password anda<br>
+					2. Anda akan mendapat password baru dari admin<br>
+					3. Login menggunakan password baru<br>
+					4. Lakukan pengubahan password demi keamanan akun<br>
+				</p>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="<?= base_url(); ?>assets/js/jquery-3.3.1.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/popper.min.js"></script>
+    <script src="<?= base_url(); ?>assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
